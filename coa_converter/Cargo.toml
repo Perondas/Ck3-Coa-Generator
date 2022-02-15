@@ -1,0 +1,13 @@
+[package]
+name = "coa_converter"
+version = "0.1.0"
+edition = "2021"
+authors = ["Perondas"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+coa_converter_lib = {path = "../coa_converter_lib"}
+image = "0.24.0"
+clap = "3.0.14"
+
