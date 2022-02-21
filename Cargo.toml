@@ -1,5 +1,6 @@
 [workspace]
 members=[
     "coa_converter",
-    "coa_converter_lib"
+    "coa_converter_lib",
+    "coa_converter_wasm"
 ]
