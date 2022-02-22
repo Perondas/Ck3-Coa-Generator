@@ -95,6 +95,7 @@ dependencies = [
 name = "coa_converter_lib"
 version = "0.1.0"
 dependencies = [
+ "getrandom",
  "image",
  "multimap",
  "rscolorq",
@@ -107,6 +108,7 @@ name = "coa_converter_wasm"
 version = "0.1.0"
 dependencies = [
  "coa_converter_lib",
+ "console_error_panic_hook",
  "image",
  "wasm-bindgen",
  "wasm-bindgen-futures",
@@ -117,6 +119,16 @@ name = "color_quant"
 version = "1.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "3d7b894f5411737b7867f4827955924d7c254fc9f4d91a6aad6b097804b1018b"
+
+[[package]]
+name = "console_error_panic_hook"
+version = "0.1.7"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "a06aeb73f470f66dcdbf7223caeebb85984942f22f1adb2a088cf9668146bbbc"
+dependencies = [
+ "cfg-if",
+ "wasm-bindgen",
+]
 
 [[package]]
 name = "crc32fast"

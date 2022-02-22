@@ -7,11 +7,19 @@ authors = ["Perondas"]
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-image = "0.24.0"
-strum = { version = "0.23", features = ["derive"] }
+strum = { version = "0.23", features = ["derive"]}
 strum_macros = "0.23"
 multimap = "0.8.3"
+
+[dependencies.image]
+version = "0.24.0"
+default-features = false
+features = ["gif", "jpeg", "ico", "png", "pnm", "tga", "tiff", "webp", "bmp", "hdr", "dxt", "dds", "farbfeld"]
 
 [dependencies.rscolorq]
 version = "0.2"
 default-features = false
+
+[dependencies.getrandom]
+version = "0.2.4"
+features = ["js"]
