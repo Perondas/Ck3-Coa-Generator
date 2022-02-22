@@ -1,0 +1,57 @@
+<div class="main-div">
+  <mat-card class="main-card">
+    <mat-card-title>Coat of arms Generator</mat-card-title>
+    <mat-divider></mat-divider>
+    <mat-card-content>
+      <div class="file-container">
+        <ngx-file-drag-drop
+          [formControl]="fileControl"
+          activeBorderColor="#3F51B5"
+          [multiple]="false"
+          [emptyPlaceholder]="'Drop image or click to select'"
+          (valueChanged)="onValueChange()"
+        ></ngx-file-drag-drop>
+      </div>
+      <div *ngIf="showControls">
+        <h2>Resolution:</h2>
+        <mat-slider
+        matTooltip="Keep this below 150 for good performance"
+          [(ngModel)]="resolution"
+          [min]="20"
+          [max]="300"
+          [step]="5"
+          [thumbLabel]="true"
+          [value]="100"
+        >
+        </mat-slider>
+        <mat-checkbox matTooltip="Check if creating a Coa for a landed title" [(ngModel)]="isTitle">Is landed title</mat-checkbox>
+        <h2>Color mode:</h2>
+        <div class="button-container">
+          <button matTooltip="Will use all colors. May result in bad performance" mat-raised-button (click)="onAllColors()">All</button>
+          <button matTooltip="Will only use 20 colors" mat-raised-button (click)="onReducedColors()">Reduced</button>
+          <button matTooltip="Will only use the preset colors from the Coa editor" mat-raised-button (click)="onVanillaColors()">Vanilla</button>
+        </div>
+      </div>
+      <div class="success-container" *ngIf="result.length != 0">
+        <mat-divider></mat-divider>
+        <h2>Done!</h2>
+        <button mat-raised-button [cdkCopyToClipboard]="result">
+          Copy to clipboard
+        </button>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<footer>
+  <mat-card>
+    <mat-card-content> 
+      <div class="footer-container">
+        <h1>Coa converter by Perondas</h1>
+        <h1>Copyright ©2022 Perondas</h1>
+        <a href="https://github.com/Perondas/Ck3-Coa-Generator"><h1>GitHub</h1></a>
+      </div>
+      
+    </mat-card-content>
+  </mat-card>
+</footer>
