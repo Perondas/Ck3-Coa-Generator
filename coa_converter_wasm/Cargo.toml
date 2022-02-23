@@ -14,8 +14,11 @@ coa_converter_lib = {path = "../coa_converter_lib"}
 wasm-bindgen-futures = "0.4.29"
 console_error_panic_hook = "0.1.7"
 
-
 [dependencies.image]
 version = "0.24.0"
 default-features = false
 features = ["gif", "jpeg", "ico", "png", "pnm", "tga", "tiff", "webp", "bmp", "hdr", "dxt", "dds", "farbfeld"]
+
+[dependencies.getrandom]
+version = "0.2.4"
+features = ["js"]

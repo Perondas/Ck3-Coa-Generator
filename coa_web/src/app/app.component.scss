@@ -1,32 +1,32 @@
 .main-div {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(226, 251, 251);
-  }
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(226, 251, 251);
+}
 
 .file-container {
-    color: azure;
-    padding-top: 10px;
+  color: azure;
+  padding-top: 10px;
 }
 
 .footer-container {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .button-container {
-    padding-bottom: 10px;
-    display: flex;
-    justify-content: space-around;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-around;
 }
 
 .message {
-    padding-top: 10px;
-    font-size: larger;
+  padding-top: 10px;
+  font-size: larger;
 }
 
 mat-slider {
-    width: 25vh;
+  width: 25vh;
 }

@@ -19,7 +19,3 @@ features = ["gif", "jpeg", "ico", "png", "pnm", "tga", "tiff", "webp", "bmp", "h
 [dependencies.rscolorq]
 version = "0.2"
 default-features = false
-
-[dependencies.getrandom]
-version = "0.2.4"
-features = ["js"]

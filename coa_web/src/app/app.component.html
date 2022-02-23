@@ -15,7 +15,7 @@
       <div *ngIf="showControls">
         <h2>Resolution:</h2>
         <mat-slider
-        matTooltip="Keep this below 150 for good performance"
+          matTooltip="Keep this below 150 for good performance"
           [(ngModel)]="resolution"
           [min]="20"
           [max]="300"
@@ -24,12 +24,34 @@
           [value]="100"
         >
         </mat-slider>
-        <mat-checkbox matTooltip="Check if creating a Coa for a landed title" [(ngModel)]="isTitle">Is landed title</mat-checkbox>
+        <mat-checkbox
+          matTooltip="Check if creating a Coa for a landed title"
+          [(ngModel)]="isTitle"
+          >Is landed title</mat-checkbox
+        >
         <h2>Color mode:</h2>
         <div class="button-container">
-          <button matTooltip="Will use all colors. May result in bad performance" mat-raised-button (click)="onAllColors()">All</button>
-          <button matTooltip="Will only use 20 colors" mat-raised-button (click)="onReducedColors()">Reduced</button>
-          <button matTooltip="Will only use the preset colors from the Coa editor" mat-raised-button (click)="onVanillaColors()">Vanilla</button>
+          <button
+            matTooltip="Will use all colors. May result in bad performance"
+            mat-raised-button
+            (click)="onAllColors()"
+          >
+            All
+          </button>
+          <button
+            matTooltip="Will only use 20 colors"
+            mat-raised-button
+            (click)="onReducedColors()"
+          >
+            Reduced
+          </button>
+          <button
+            matTooltip="Will only use the preset colors from the Coa editor"
+            mat-raised-button
+            (click)="onVanillaColors()"
+          >
+            Vanilla
+          </button>
         </div>
       </div>
       <div class="success-container" *ngIf="result.length != 0">
@@ -45,13 +67,14 @@
 
 <footer>
   <mat-card>
-    <mat-card-content> 
+    <mat-card-content>
       <div class="footer-container">
         <h1>Coa converter by Perondas</h1>
         <h1>Copyright ©2022 Perondas</h1>
-        <a href="https://github.com/Perondas/Ck3-Coa-Generator"><h1>GitHub</h1></a>
+        <a href="https://github.com/Perondas/Ck3-Coa-Generator"
+          ><h1>GitHub</h1></a
+        >
       </div>
-      
     </mat-card-content>
   </mat-card>
 </footer>
